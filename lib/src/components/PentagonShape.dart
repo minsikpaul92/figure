@@ -551,6 +551,7 @@ class PentagonShape extends PositionComponent
 
     _isLongPressing = false;
     _frozenPosition = null;
+    children.whereType<Effect>().forEach((effect) => effect.resume());
     _myBlinking()?.isPaused = false;
   }
 
